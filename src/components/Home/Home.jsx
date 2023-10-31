@@ -1,8 +1,8 @@
 import Cookies from "js-cookie";
 import Slider from "react-slick";
 import { useNavigate } from "react-router-dom";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+// import "slick-carousel/slick/slick.css";
+// import "slick-carousel/slick/slick-theme.css";
 import { TailSpin } from "react-loader-spinner";
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";

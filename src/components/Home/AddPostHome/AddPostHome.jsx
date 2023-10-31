@@ -4,7 +4,7 @@ import { Input } from "antd";
 import useFetchPost from "../../customize/fetchpost";
 import useFetch from "../../customize/fetch";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Carousel from "react-elastic-carousel";
+// import Carousel from "react-elastic-carousel";
 import axios from "axios";
 import {
   faCoffee,
@@ -398,7 +398,7 @@ const AddPostHome = ({ load, setLoad }) => {
               </div>
 
               {/* isError === false && isLoading === false && data && data.length > 0 */}
-              {!isLoadingBooks &&
+              {/* {!isLoadingBooks &&
                 !isErrorBooks &&
                 dataBooks &&
                 dataBooks.length > 0 && (
@@ -406,23 +406,23 @@ const AddPostHome = ({ load, setLoad }) => {
                   //   style={{ display: "flex", justifyContent: "space-around" }}
                   //   size={30}
                   // >
-                  <Carousel itemsToShow={3} pagination={false}>
-                    {dataBooks.map((item) => (
-                      <div style={{ margin: "0 5px" }} key={item.bookID}>
-                        <img
-                          style={{
-                            width: "140px",
-                            height: "200px",
-                            borderRadius: "10px",
-                          }}
-                          src={item.image}
-                          alt="imageBook1"
-                          onClick={() => handleClickAddBook(item.bookID)}
-                        />
-                      </div>
-                    ))}
-                  </Carousel>
-                )}
+                  // <Carousel itemsToShow={3} pagination={false}>
+                  //   {dataBooks.map((item) => (
+                  //     <div style={{ margin: "0 5px" }} key={item.bookID}>
+                  //       <img
+                  //         style={{
+                  //           width: "140px",
+                  //           height: "200px",
+                  //           borderRadius: "10px",
+                  //         }}
+                  //         src={item.image}
+                  //         alt="imageBook1"
+                  //         onClick={() => handleClickAddBook(item.bookID)}
+                  //       />
+                  //     </div>
+                  //   ))}
+                  // </Carousel>
+                )} */}
             </div>
             <div className="model-content-submit">
               <Button
