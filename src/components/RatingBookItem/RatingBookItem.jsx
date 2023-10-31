@@ -1,7 +1,5 @@
 import React from "react";
-import bookimage from "../../assets/bookimage.svg";
 import useFetch from "../customize/fetch";
-import star from "../../assets/Star01.svg";
 import { Rate } from "antd";
 import "./RatingBookItem.css";
 function RatingBookItem() {
