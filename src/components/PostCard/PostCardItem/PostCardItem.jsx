@@ -55,7 +55,7 @@ const PostCardItem = ({
   const handleClickComment = async (postID) => {
     const _opencomment = !openComment;
     if (_opencomment) {
-      const urlComment = `http://localhost:8080/api/comment/post/${postID}`;
+      const urlComment = `https://bookhubpostgress-production.up.railway.app/api/comment/post/${postID}`;
       // Get request using axios with error handling
       await axios
         .get(urlComment)
@@ -90,7 +90,7 @@ const PostCardItem = ({
   const handleClickEditSave = (postID) => {
     // Assuming the postID, updatedPost, and result are defined and available
 
-    const url = `http://localhost:8080/api/posts/update/${postID}`;
+    const url = `https://bookhubpostgress-production.up.railway.app/api/posts/update/${postID}`;
 
     // Check for validation errors
     // The request payload and headers
@@ -111,7 +111,7 @@ const PostCardItem = ({
     setLoad(!load);
   };
   const handleDeletePost = (postID) => {
-    const url = `http://localhost:8080/api/posts/delete/${postID}`;
+    const url = `https://bookhubpostgress-production.up.railway.app/api/posts/delete/${postID}`;
 
     // DELETE request using axios with error handling
     axios
@@ -125,7 +125,7 @@ const PostCardItem = ({
 
   useEffect(() => {
     async function fetchData() {
-      const url = `http://localhost:8080/api/progresses/${item.user.userID}/${item.book.bookID}`;
+      const url = `https://bookhubpostgress-production.up.railway.app/api/progresses/${item.user.userID}/${item.book.bookID}`;
 
       await axios
         .get(url)
@@ -142,8 +142,8 @@ const PostCardItem = ({
     fetchData();
   }, []);
   const handleClickLikePost = async (postID) => {
-    const url = `http://localhost:8080/api/posts/${postID}/like`;
-    const urlDislike = `http://localhost:8080/api/posts/${postID}/${Cookies.get(
+    const url = `https://bookhubpostgress-production.up.railway.app/api/posts/${postID}/like`;
+    const urlDislike = `https://bookhubpostgress-production.up.railway.app/api/posts/${postID}/${Cookies.get(
       "user_id"
     )}/dislike`;
 

@@ -9,10 +9,13 @@ function RatingBookItem() {
     data: dataBooks,
     isLoadingBooks,
     isErrorBooks,
-  } = useFetch("http://localhost:8080/api/books", false);
+  } = useFetch(
+    "https://bookhubpostgress-production.up.railway.app/api/books",
+    false
+  );
   return (
     <>
-      {dataBooks.map((item, idx) => (
+      {Object.keys(dataBooks).map((item, idx) => (
         <div key={item.bookID}>
           {idx <= 4 && (
             <div className="rating-book-item" style={{ margin: "0 5px" }}>

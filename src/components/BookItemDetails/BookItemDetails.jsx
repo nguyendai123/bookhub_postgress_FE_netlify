@@ -30,7 +30,7 @@ const BookItemDetails = () => {
   const getBookDetailsApi = async () => {
     setBookDetailsApiStatus(bookDetailsApiStatuses.inProgress);
 
-    const bookDetailsApi = `http://localhost:8080/api/books/${id}`;
+    const bookDetailsApi = `https://bookhubpostgress-production.up.railway.app/api/books/${id}`;
     const jwtToken = Cookies.get("jwt_token");
     const options = {
       method: "GET",

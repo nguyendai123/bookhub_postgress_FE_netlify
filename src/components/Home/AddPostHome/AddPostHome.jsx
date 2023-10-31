@@ -48,7 +48,10 @@ const AddPostHome = ({ load, setLoad }) => {
     data: dataBooks,
     isLoadingBooks,
     isErrorBooks,
-  } = useFetch("http://localhost:8080/api/books", false);
+  } = useFetch(
+    "https://bookhubpostgress-production.up.railway.app/api/books",
+    false
+  );
   console.log("dataBooks", dataBooks, isLoadingBooks, isErrorBooks);
 
   const onClickAddBookPost = () => {
@@ -63,7 +66,10 @@ const AddPostHome = ({ load, setLoad }) => {
       data: dataBooksAdd,
       isLoadingBooksAdd,
       isErrorBooksAdd,
-    } = useFetch(`http://localhost:8080/api/books/${id}`, false);
+    } = useFetch(
+      `https://bookhubpostgress-production.up.railway.app/api/books/${id}`,
+      false
+    );
     console.log(
       "dataBooksAdd",
       dataBooksAdd,
@@ -80,7 +86,7 @@ const AddPostHome = ({ load, setLoad }) => {
   async function getNewPosts() {
     const fetchData = async () => {
       try {
-        const url = `http://localhost:8080/api/posts/create/${user_Id}`; // Replace with your API endpoint
+        const url = `https://bookhubpostgress-production.up.railway.app/api/posts/create/${user_Id}`; // Replace with your API endpoint
         const payload = {
           content: `${value}`,
           book: {
@@ -99,7 +105,8 @@ const AddPostHome = ({ load, setLoad }) => {
             : pageProgressStatus == pageBook
             ? "Completed"
             : "want to read";
-        const urlProgress = "http://localhost:8080/api/progresses/create";
+        const urlProgress =
+          "https://bookhubpostgress-production.up.railway.app/api/progresses/create";
 
         const response1 = await axios.post(urlProgress, {
           book: {

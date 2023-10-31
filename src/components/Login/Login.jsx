@@ -32,7 +32,8 @@ const Login = () => {
   const onSubmitForm = async (event) => {
     event.preventDefault();
     const userDetails = { username, password };
-    const apiUrl = "http://localhost:8080/api/auth/signin";
+    const apiUrl =
+      "https://bookhubpostgress-production.up.railway.app/api/auth/signin";
     const options = {
       method: "POST",
       headers: new Headers({

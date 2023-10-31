@@ -67,7 +67,7 @@ const BookShelves = () => {
   const getBooksApiData = async () => {
     setBooksApiStatus(bookApiStatuses.inProgress);
 
-    const booksApi = `http://localhost:8080/api/books`;
+    const booksApi = `https://bookhubpostgress-production.up.railway.app/api/books`;
 
     // const jwtToken = Cookies.get("jwt_token");
     const options = {

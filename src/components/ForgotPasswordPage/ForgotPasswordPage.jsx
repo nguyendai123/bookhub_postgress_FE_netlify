@@ -24,7 +24,7 @@ const ForgotPasswordPage = () => {
   //     }
 
   //     axios
-  //       .get("http://localhost:8080/api/auth/resetPassword", {
+  //       .get("https://bookhubpostgress-production.up.railway.app/api/auth/resetPassword", {
   //         params: {
   //           usernameOrEmail: identifier,
   //         },

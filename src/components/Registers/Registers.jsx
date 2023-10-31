@@ -44,7 +44,10 @@ const RegisterForm = () => {
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
     axios
-      .post("http://localhost:8080/api/auth/register", values)
+      .post(
+        "https://bookhubpostgress-production.up.railway.app/api/auth/register",
+        values
+      )
       .then((response) => {
         console.log("Response from backend: ", response.data);
 

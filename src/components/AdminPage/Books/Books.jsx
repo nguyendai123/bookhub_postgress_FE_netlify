@@ -6,7 +6,7 @@ const Books = () => {
   const [books, setbooks] = useState([]);
   const [reloadData, setReloadData] = useState(false);
   useEffect(() => {
-    fetch("http://localhost:8080/api/books")
+    fetch("https://bookhubpostgress-production.up.railway.app/api/books")
       .then((response) => response.json())
       .then((data) => {
         setbooks(data);
@@ -102,7 +102,7 @@ const Books = () => {
         // const bookId = editingbook.bookID;
 
         // // Assume the book has an "id" property
-        // fetch(`http://localhost:8080/api/books/${bookId}`, {
+        // fetch(`https://bookhubpostgress-production.up.railway.app/api/books/${bookId}`, {
         //   method: "PUT",
         //   formData,
         // })
@@ -126,7 +126,7 @@ const Books = () => {
         // Edit existing book
 
         const bookId = editingbook.bookID;
-        const urlBook = `http://localhost:8080/api/books/${bookId}`;
+        const urlBook = `https://bookhubpostgress-production.up.railway.app/api/books/${bookId}`;
 
         const response = await axios.put(urlBook, formData);
         const data = response.data;
@@ -142,7 +142,8 @@ const Books = () => {
 
         setReloadData(true);
       } else {
-        const url = "http://localhost:8080/api/books/add";
+        const url =
+          "https://bookhubpostgress-production.up.railway.app/api/books/add";
         const response1 = await axios.post(url, formData);
         const data1 = response1.data;
         console.log("books dai api progress", data1);
@@ -224,9 +225,12 @@ const Books = () => {
   };
 
   const cancelbook = (book) => {
-    fetch(`http://localhost:8080/api/books/${book.bookID}`, {
-      method: "DELETE",
-    })
+    fetch(
+      `https://bookhubpostgress-production.up.railway.app/api/books/${book.bookID}`,
+      {
+        method: "DELETE",
+      }
+    )
       .then((response) => {
         if (response.ok) {
           setbooks((prevbooks) => prevbooks.filter((item) => item !== book));

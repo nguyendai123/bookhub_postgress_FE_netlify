@@ -52,7 +52,7 @@ function PostCard({ data, load, setLoad, isError, isLoading }) {
   const handleClickEditSave = (postID) => {
     // Assuming the postID, updatedPost, and result are defined and available
 
-    const url = `http://localhost:8080/api/posts/update/${postID}`;
+    const url = `https://bookhubpostgress-production.up.railway.app/api/posts/update/${postID}`;
 
     // Check for validation errors
     // The request payload and headers
@@ -73,7 +73,7 @@ function PostCard({ data, load, setLoad, isError, isLoading }) {
     setLoad(!load);
   };
   const handleDeletePost = (postID) => {
-    const url = `http://localhost:8080/api/posts/delete/${postID}`;
+    const url = `https://bookhubpostgress-production.up.railway.app/api/posts/delete/${postID}`;
 
     // DELETE request using axios with error handling
     axios
@@ -86,7 +86,7 @@ function PostCard({ data, load, setLoad, isError, isLoading }) {
   };
   const handleClickLikePost = (postID) => {
     setUserLike(!userLike);
-    const url = `http://localhost:8080/api/posts/post/${postID}`;
+    const url = `https://bookhubpostgress-production.up.railway.app/api/posts/post/${postID}`;
   };
   return (
     <>
@@ -336,7 +336,7 @@ function PostCard({ data, load, setLoad, isError, isLoading }) {
           </div>
         </div>
       </Modal>
-      {data.map((item) => (
+      {Object.keys(data).map((item) => (
         <div key={"id" + item.postID}>
           <PostCardItem
             isError={isError}

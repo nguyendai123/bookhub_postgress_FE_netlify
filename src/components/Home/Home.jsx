@@ -110,17 +110,12 @@ const Home = () => {
   const [topRatedBooks, setTopRatedBooks] = useState([]);
   const [data, setData] = useState([]);
   const [load, setLoad] = useState(false);
-  // const {\
-  //   data: dataPosts,
-  //   isLoading,
-  //   isError,
-  // } = useFetch("http://localhost:8080/api/posts", false);
-  // setData(dataPosts);
-  // console.log("posts888", dataPosts);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = "http://localhost:8080/api/posts"; // Replace with your API endpoint
+        const url =
+          "https://bookhubpostgress-production.up.railway.app/api/posts"; // Replace with your API endpoint
         let res = await axios.get(url);
 
         let data1 = res && res.data ? res.data : [];
@@ -137,7 +132,8 @@ const Home = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const url = "http://localhost:8080/api/posts"; // Replace with your API endpoint
+        const url =
+          "https://bookhubpostgress-production.up.railway.app/api/posts"; // Replace with your API endpoint
         let res = await axios.get(url);
 
         let data1 = res && res.data ? res.data : [];
@@ -159,7 +155,8 @@ const Home = () => {
   const getTopRatedBooks = async () => {
     setTopRatedApiStatus(topRatedApiStatuses.inProgress);
 
-    const topRatedBooksApi = "http://localhost:8080/api/books";
+    const topRatedBooksApi =
+      "https://bookhubpostgress-production.up.railway.app/api/books";
     const jwtToken = Cookies.get("jwt_token");
     const options = {
       method: "GET",

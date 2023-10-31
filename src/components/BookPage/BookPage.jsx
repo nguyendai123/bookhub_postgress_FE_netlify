@@ -70,7 +70,8 @@ const BookPage = () => {
   const getTopRatedBooks = async () => {
     setTopRatedApiStatus(topRatedApiStatuses.inProgress);
 
-    const topRatedBooksApi = "http://localhost:8080/api/books";
+    const topRatedBooksApi =
+      "https://bookhubpostgress-production.up.railway.app/api/books";
     const jwtToken = Cookies.get("jwt_token");
     const options = {
       method: "GET",
