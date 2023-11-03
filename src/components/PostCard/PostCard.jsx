@@ -336,8 +336,9 @@ function PostCard({ data, load, setLoad, isError, isLoading }) {
           </div>
         </div>
       </Modal>
-      {Object.keys(data).map((item) => (
+      {data.map((item) => (
         <div key={"id" + item.postID}>
+          {console.log("item123 ", item)}
           <PostCardItem
             isError={isError}
             isLoading={isLoading}

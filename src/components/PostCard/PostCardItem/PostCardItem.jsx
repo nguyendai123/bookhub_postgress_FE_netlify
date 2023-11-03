@@ -70,6 +70,7 @@ const PostCardItem = ({
     setOpenComment(_opencomment);
   };
   console.log("dât", data);
+  console.log("item pót item", item);
   const menu = (
     <Menu>
       <Menu.Item

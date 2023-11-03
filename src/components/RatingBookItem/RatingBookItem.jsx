@@ -13,7 +13,7 @@ function RatingBookItem() {
   );
   return (
     <>
-      {Object.keys(dataBooks).map((item, idx) => (
+      {dataBooks.map((item, idx) => (
         <div key={item.bookID}>
           {idx <= 4 && (
             <div className="rating-book-item" style={{ margin: "0 5px" }}>
